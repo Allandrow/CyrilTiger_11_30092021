@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
+
+:root {
+  --padding: 1.25rem;
+  --body-clr: hsla(0, 100%, 69%, 1);
+  --font: 'Montserrat';
+}
+
+body {
+  padding: var(--padding);
+  font-family: var(--font), sans-serif;
+}
