@@ -1,7 +1,12 @@
 import React from 'react'
+import Banner from '../../components/banner'
 
 export default class Home extends React.Component {
   render() {
-    return <h1>Accueil</h1>
+    return (
+      <main>
+        <Banner />
+      </main>
+    )
   }
 }
