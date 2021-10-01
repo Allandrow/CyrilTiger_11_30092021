@@ -1,7 +1,12 @@
 import React from 'react'
+import Banner from '../../components/banner'
 
 export default class About extends React.Component {
   render() {
-    return <h1>A propos</h1>
+    return (
+      <main className="about">
+        <Banner />
+      </main>
+    )
   }
 }
