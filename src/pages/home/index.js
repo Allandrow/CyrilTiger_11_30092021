@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from '../../components/banner'
+import LocationList from '../../components/locationList'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -36,22 +37,11 @@ export default class Home extends React.Component {
       )
   }
 
-  // Create component for list + location card
-  createLocationList() {
-    return (
-      <ul>
-        {this.state.data.map((location) => (
-          <li key={location.id}>{location.title}</li>
-        ))}
-      </ul>
-    )
-  }
-
   render() {
     return (
       <main className="home">
         <Banner title={this.title} />
-        {this.createLocationList()}
+        <LocationList data={this.state.data} />
       </main>
     )
   }
