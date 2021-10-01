@@ -1,11 +1,12 @@
 import React from 'react'
+import LocationCard from '../locationCard'
 
 export default class LocationList extends React.Component {
   render() {
     return (
       <ul>
         {this.props.data.map((location) => (
-          <li key={location.id}>{location.title}</li>
+          <LocationCard key={location.id} location={location} />
         ))}
       </ul>
     )
