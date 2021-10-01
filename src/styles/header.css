@@ -3,8 +3,12 @@ header {
   justify-content: space-between;
 }
 
-h1 {
-  width: 145px;
+h1 a {
+  display: block;
+}
+
+h1 img {
+  height: 3rem;
 }
 
 nav ul {
@@ -17,8 +21,25 @@ nav li a {
   text-decoration: none;
   color: var(--body-clr);
   font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 nav .active {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  h1 img {
+    height: 4.25rem;
+  }
+
+  nav ul {
+    gap: 3.5rem;
+  }
+
+  nav li a {
+    font-size: 1.5rem;
+    text-transform: initial;
+  }
 }
