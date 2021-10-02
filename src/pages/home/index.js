@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../../components/banner'
 import LocationList from '../../components/locationList'
+import '../../styles/home.css'
 
 export default class Home extends React.Component {
   constructor(props) {
