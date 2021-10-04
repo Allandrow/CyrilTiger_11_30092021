@@ -7,7 +7,7 @@ export default class Footer extends React.Component {
     return (
       <footer>
         <img src={logo} alt="Kasa" />
-        <strong>© 2020 Kasa. All rights reserved</strong>
+        <strong>© 2021 Kasa. All rights reserved</strong>
       </footer>
     )
   }
