@@ -3,6 +3,7 @@ import Error from '../error'
 import Dropdown from '../../components/dropdown'
 import './location.css'
 import MainLayout from '../../layout/mainLayout'
+import LocationContent from '../../components/locationContent'
 
 export default class Location extends React.Component {
   constructor(props) {
@@ -39,33 +40,24 @@ export default class Location extends React.Component {
     this.getLocation()
   }
 
+  makeLocation() {
+    const { description, equipment } = this.state.data
+    return (
+      <MainLayout>
+        <main className="location">
+          <div className="carousel">{/* CAROUSEL COMPONENT */}</div>
+          <LocationContent data={this.state.data} />
+          <Dropdown title="Description" text={description} />
+          <Dropdown title="Équipements" text={equipment} />
+        </main>
+      </MainLayout>
+    )
+  }
+
   render() {
     const { isLoaded, data } = this.state
     if (!isLoaded) return null
-    if (isLoaded && data) {
-      const { title, location, description, equipment, host } = this.state.data
-      return (
-        <MainLayout>
-          <main className="location">
-            <div className="carousel"></div>
-            <div className="location__content">
-              <div>
-                <h2>{title}</h2>
-                <p>{location}</p>
-                <div className="tags">{/* TAGS */}</div>
-              </div>
-              <div>
-                <div className="host">{host.name}</div>
-                <div className="rating">{/* RATING component */}</div>
-              </div>
-              <Dropdown title="Description" text={description} />
-              <Dropdown title="Équipements" text={equipment} />
-            </div>
-          </main>
-        </MainLayout>
-      )
-    } else {
-      return <Error />
-    }
+    if (isLoaded && data) return this.makeLocation()
+    return <Error />
   }
 }
