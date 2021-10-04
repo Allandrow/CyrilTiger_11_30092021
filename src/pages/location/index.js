@@ -1,4 +1,5 @@
 import React from 'react'
+import Error from '../error'
 
 export default class Location extends React.Component {
   constructor(props) {
@@ -31,10 +32,14 @@ export default class Location extends React.Component {
   }
 
   render() {
-    return (
-      <main>
-        <h2>{this.state.data.title}</h2>
-      </main>
-    )
+    if (!this.state.data) {
+      return <Error />
+    } else {
+      return (
+        <main>
+          <h2>{this.state.data.title}</h2>
+        </main>
+      )
+    }
   }
 }
