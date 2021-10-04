@@ -4,11 +4,11 @@ header {
 }
 
 h1 a {
-  display: block;
-}
-
-h1 img {
+  display: flex;
   height: 3rem;
+  max-width: 145px;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {

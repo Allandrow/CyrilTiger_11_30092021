@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.svg'
+import { ReactComponent as KasaLogo } from '../../assets/logo.svg'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +7,7 @@ export default class Logo extends React.Component {
     return (
       <h1>
         <Link to="/">
-          <img src={logo} alt="Kasa" />
+          <KasaLogo alt="Kasa" />
         </Link>
       </h1>
     )
