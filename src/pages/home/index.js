@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../../components/banner'
 import LocationList from '../../components/locationList'
+import MainLayout from '../../layout/mainLayout'
 import './home.css'
 
 export default class Home extends React.Component {
@@ -40,10 +41,12 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <main className="home">
-        <Banner title={this.title} />
-        <LocationList data={this.state.data} />
-      </main>
+      <MainLayout>
+        <main className="home">
+          <Banner title={this.title} />
+          <LocationList data={this.state.data} />
+        </main>
+      </MainLayout>
     )
   }
 }
