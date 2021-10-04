@@ -4,7 +4,6 @@ import '../../styles/locationCard.css'
 
 export default class LocationCard extends React.Component {
   render() {
-    console.log(this.props.location)
     return (
       <li>
         <Link

@@ -1,7 +1,7 @@
 import React from 'react'
 import Error from '../error'
-import '../../styles/location.css'
 import Dropdown from '../../components/dropdown'
+import '../../styles/location.css'
 
 export default class Location extends React.Component {
   constructor(props) {
@@ -9,19 +9,20 @@ export default class Location extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      data: []
+      data: undefined
     }
-    this.id = this.props.match.params.id
   }
 
-  componentDidMount() {
+  getLocation() {
     fetch('../data/data.json')
       .then((res) => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            data: result.find((location) => location.id === this.id)
+            data: result.find(
+              (location) => location.id === this.props.match.params.id
+            )
           })
         },
         (error) => {
@@ -33,12 +34,22 @@ export default class Location extends React.Component {
       )
   }
 
+  componentDidMount() {
+    this.getLocation()
+  }
+
+  componentDidUpdate() {
+    if (this.state.data.id !== this.props.match.params.id) {
+      this.getLocation()
+    }
+  }
+
   render() {
-    if (!this.state.data) {
-      return <Error />
-    } else {
-      const { title, location, description, equipment } = this.state.data
-      console.log(this.state.data)
+    const { isLoaded, data } = this.state
+    if (!isLoaded) return null
+    if (isLoaded && (data !== undefined || data.length > 0)) {
+      const { title, location, description, equipment, tags, host } =
+        this.state.data
       return (
         <main className="location">
           <div className="carousel"></div>
@@ -46,10 +57,10 @@ export default class Location extends React.Component {
             <div>
               <h2>{title}</h2>
               <p>{location}</p>
-              <div className="tags">{/* TAG components */}</div>
+              <div className="tags">{/* TAGS */}</div>
             </div>
             <div>
-              <div className="host">{/* HOST component */}</div>
+              <div className="host">{host.name}</div>
               <div className="rating">{/* RATING component */}</div>
             </div>
             <Dropdown title="Description" text={description} />
@@ -57,6 +68,8 @@ export default class Location extends React.Component {
           </div>
         </main>
       )
+    } else {
+      return <Error />
     }
   }
 }
