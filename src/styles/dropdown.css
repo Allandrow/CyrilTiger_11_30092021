@@ -18,6 +18,7 @@
 .dropdown img {
   transform: rotate(180deg);
   width: 1rem;
+  transition: transform 150ms;
 }
 
 .dropdown[open] img {
