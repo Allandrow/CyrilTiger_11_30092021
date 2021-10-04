@@ -1,5 +1,7 @@
 import React from 'react'
 import Error from '../error'
+import '../../styles/location.css'
+import Dropdown from '../../components/dropdown'
 
 export default class Location extends React.Component {
   constructor(props) {
@@ -35,9 +37,24 @@ export default class Location extends React.Component {
     if (!this.state.data) {
       return <Error />
     } else {
+      const { title, location, description, equipment } = this.state.data
+      console.log(this.state.data)
       return (
-        <main>
-          <h2>{this.state.data.title}</h2>
+        <main className="location">
+          <div className="carousel"></div>
+          <div className="location__content">
+            <div>
+              <h2>{title}</h2>
+              <p>{location}</p>
+              <div className="tags">{/* TAG components */}</div>
+            </div>
+            <div>
+              <div className="host">{/* HOST component */}</div>
+              <div className="rating">{/* RATING component */}</div>
+            </div>
+            <Dropdown title="Description" text={description} />
+            <Dropdown title="Équipements" text={equipment} />
+          </div>
         </main>
       )
     }
