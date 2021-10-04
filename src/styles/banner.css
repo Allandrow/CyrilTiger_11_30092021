@@ -15,6 +15,7 @@
 
 .about .banner {
   background-image: var(--gradient), url(../assets/about-banner.png);
+  height: 14rem;
 }
 
 .banner h2 {
