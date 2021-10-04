@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../styles/locationCard.css'
+import './locationCard.css'
 
 export default class LocationCard extends React.Component {
   render() {

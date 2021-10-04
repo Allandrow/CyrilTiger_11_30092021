@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo-white.svg'
-import '../../styles/footer.css'
+import './footer.css'
 
 export default class Footer extends React.Component {
   render() {

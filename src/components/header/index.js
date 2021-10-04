@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../logo'
 import Navigation from '../navigation'
-import '../../styles/header.css'
+import './header.css'
 
 export default class Header extends React.Component {
   render() {

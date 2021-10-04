@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/banner.css'
+import './banner.css'
 
 export default class Banner extends React.Component {
   render() {

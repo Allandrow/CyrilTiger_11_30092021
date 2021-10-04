@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from '../../components/banner'
 import Dropdown from '../../components/dropdown'
-import '../../styles/about.css'
+import './about.css'
 
 export default class About extends React.Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../styles/error.css'
+import './error.css'
 
 export default class Error extends React.Component {
   render() {

@@ -5,6 +5,7 @@ import About from './pages/about'
 import Error from './pages/error'
 import Header from './components/header'
 import Location from './pages/location'
+import Footer from './components/footer'
 
 export default class App extends React.Component {
   render() {
@@ -23,6 +24,7 @@ export default class App extends React.Component {
             <Error />
           </Route>
         </Switch>
+        <Footer />
       </div>
     )
   }

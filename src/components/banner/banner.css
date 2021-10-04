@@ -10,11 +10,11 @@
 }
 
 .home .banner {
-  background-image: var(--gradient), url(../assets/home-banner.png);
+  background-image: var(--gradient), url(../../assets/home-banner.png);
 }
 
 .about .banner {
-  background-image: var(--gradient), url(../assets/about-banner.png);
+  background-image: var(--gradient), url(../../assets/about-banner.png);
   height: 14rem;
 }
 

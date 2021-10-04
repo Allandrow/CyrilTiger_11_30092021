@@ -1,7 +1,7 @@
 import React from 'react'
 import Error from '../error'
 import Dropdown from '../../components/dropdown'
-import '../../styles/location.css'
+import './location.css'
 
 export default class Location extends React.Component {
   constructor(props) {
@@ -48,8 +48,7 @@ export default class Location extends React.Component {
     const { isLoaded, data } = this.state
     if (!isLoaded) return null
     if (isLoaded && (data !== undefined || data.length > 0)) {
-      const { title, location, description, equipment, tags, host } =
-        this.state.data
+      const { title, location, description, equipment, host } = this.state.data
       return (
         <main className="location">
           <div className="carousel"></div>
