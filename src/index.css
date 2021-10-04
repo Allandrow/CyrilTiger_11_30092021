@@ -4,6 +4,7 @@
   --padding: 1.25rem;
   --body-clr: hsla(0, 100%, 69%, 1);
   --font: 'Montserrat';
+  --footer-height: 13rem;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
 
 .wrapper {
   padding: var(--padding);
+  min-height: calc(100vh - var(--footer-height));
 }
 
 @media screen and (min-width: 1200px) {

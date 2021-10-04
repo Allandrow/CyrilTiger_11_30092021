@@ -7,7 +7,7 @@ footer {
   color: #fff;
   margin-top: 2rem;
   gap: 2rem;
-  height: 13rem;
+  height: var(--footer-height);
   padding-top: 1rem;
 }
 
