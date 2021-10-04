@@ -14,6 +14,8 @@ body {
 .wrapper {
   padding: var(--padding);
   min-height: calc(100vh - var(--footer-height));
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1200px) {
