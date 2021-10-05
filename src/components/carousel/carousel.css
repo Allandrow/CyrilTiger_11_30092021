@@ -1,0 +1,57 @@
+.carousel {
+  height: 16rem;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .medias {
+  height: 100%;
+  overflow: hidden;
+}
+
+.medias img {
+  height: 100%;
+  display: none;
+  animation-duration: 300ms;
+}
+
+.medias img.visible {
+  display: block;
+}
+
+.carousel button {
+  border: 0;
+  background: none;
+  position: absolute;
+}
+
+.carousel button img {
+  cursor: pointer;
+}
+
+.carousel .currentCount {
+  position: absolute;
+  align-self: flex-end;
+  color: #fff;
+}
+
+.prevBtn {
+  left: 0;
+}
+
+.prevBtn img {
+  transform: rotate(-90deg);
+}
+
+.nextBtn {
+  right: 0;
+}
+
+.nextBtn img {
+  transform: rotate(90deg);
+}

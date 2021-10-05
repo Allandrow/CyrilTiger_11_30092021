@@ -1,9 +1,9 @@
 import React from 'react'
 import Error from '../error'
 import Dropdown from '../../components/dropdown'
-import './location.css'
 import MainLayout from '../../layout/mainLayout'
 import LocationContent from '../../components/locationContent'
+import Carousel from '../../components/carousel'
 
 export default class Location extends React.Component {
   constructor(props) {
@@ -41,11 +41,11 @@ export default class Location extends React.Component {
   }
 
   makeLocation() {
-    const { description, equipment } = this.state.data
+    const { description, equipment, pictures } = this.state.data
     return (
       <MainLayout>
         <main className="location">
-          <div className="carousel">{/* CAROUSEL COMPONENT */}</div>
+          <Carousel data={pictures} />
           <LocationContent data={this.state.data} />
           <Dropdown title="Description" text={description} />
           <Dropdown title="Équipements" text={equipment} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import arrow from '../../assets/arrow.svg'
+import Arrow from '../arrow'
 import './dropdown.css'
 
 export default class Dropdown extends React.Component {
@@ -8,7 +8,7 @@ export default class Dropdown extends React.Component {
       <details className="dropdown">
         <summary>
           {this.props.title}
-          <img src={arrow} alt="arrow" />
+          <Arrow />
         </summary>
         <p>{this.props.text}</p>
       </details>
