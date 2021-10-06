@@ -4,6 +4,7 @@ import Dropdown from '../../components/dropdown'
 import MainLayout from '../../layout/mainLayout'
 import LocationContent from '../../components/locationContent'
 import Carousel from '../../components/carousel'
+import './location.css'
 
 export default class Location extends React.Component {
   constructor(props) {

@@ -36,7 +36,7 @@
 
 .carousel .currentCount {
   position: absolute;
-  align-self: flex-end;
+  bottom: 0.5rem;
   color: #fff;
 }
 
@@ -54,4 +54,28 @@
 
 .nextBtn img {
   transform: rotate(90deg);
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    height: 26rem;
+  }
+
+  .medias {
+    width: 100%;
+  }
+
+  .medias img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel button img {
+    width: 3rem;
+  }
+
+  .carousel .currentCount {
+    bottom: 2rem;
+    font-size: 1.125rem;
+  }
 }
