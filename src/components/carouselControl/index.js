@@ -4,7 +4,10 @@ import Arrow from '../arrow'
 export default class CarouselControl extends React.Component {
   render() {
     return (
-      <button className={this.props.className} onClick={this.props.onClick}>
+      <button
+        className={this.props.className}
+        onClick={() => this.props.onClick(this.props.direction)}
+      >
         <Arrow />
       </button>
     )

@@ -8,6 +8,7 @@ export default class Carousel extends React.Component {
     this.state = {
       current: null
     }
+    this.updateCurrentVisibleMedia = this.updateCurrentVisibleMedia.bind(this)
   }
 
   componentDidMount() {
@@ -18,25 +19,17 @@ export default class Carousel extends React.Component {
 
   updateCurrentVisibleMedia(direction) {
     if (direction === 'next') {
-      if (this.props.data[this.state.current + 1]) {
-        this.setState({
-          current: this.state.current + 1
-        })
-      } else {
-        this.setState({
-          current: 0
-        })
-      }
+      const next = this.state.current + 1
+      this.setState({
+        current: this.props.data[next] ? next : 0
+      })
     } else {
-      if (this.props.data[this.state.current - 1]) {
-        this.setState({
-          current: this.state.current - 1
-        })
-      } else {
-        this.setState({
-          current: this.props.data.length - 1
-        })
-      }
+      const previous = this.state.current - 1
+      this.setState({
+        current: this.props.data[previous]
+          ? previous
+          : this.props.data.length - 1
+      })
     }
   }
 
@@ -61,7 +54,8 @@ export default class Carousel extends React.Component {
         <div className="carousel">
           <CarouselControl
             className="prevBtn"
-            onClick={() => this.updateCurrentVisibleMedia('prev')}
+            onClick={this.updateCurrentVisibleMedia}
+            direction={'previous'}
           />
           {this.generateCarouselMedias()}
           <span className="currentCount">{`
@@ -69,7 +63,8 @@ export default class Carousel extends React.Component {
           `}</span>
           <CarouselControl
             className="nextBtn"
-            onClick={() => this.updateCurrentVisibleMedia('next')}
+            onClick={this.updateCurrentVisibleMedia}
+            direction={'next'}
           />
         </div>
       )
@@ -79,7 +74,6 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    // console.log(this.props.data)
     return this.generateCarouselContent()
   }
 }
