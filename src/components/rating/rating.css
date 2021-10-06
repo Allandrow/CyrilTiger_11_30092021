@@ -1,0 +1,8 @@
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rating img {
+  width: 1rem;
+}

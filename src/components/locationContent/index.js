@@ -1,9 +1,11 @@
 import React from 'react'
+import Host from '../host'
+import Rating from '../rating'
 import './locationContent.css'
 
 export default class LocationContent extends React.Component {
   render() {
-    const { title, location, host, tags } = this.props.data
+    const { title, location, host, tags, rating } = this.props.data
     return (
       <div className="location__content">
         <div>
@@ -20,8 +22,8 @@ export default class LocationContent extends React.Component {
           </div>
         </div>
         <div>
-          <div className="host">{host.name}</div>
-          <div className="rating">{/* RATING component */}</div>
+          <Rating rating={rating} />
+          <Host data={host} />
         </div>
       </div>
     )
