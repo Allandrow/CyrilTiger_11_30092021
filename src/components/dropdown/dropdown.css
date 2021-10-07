@@ -25,7 +25,8 @@
   transform: rotate(0deg);
 }
 
-.dropdown p {
+.dropdown p,
+.dropdownList {
   padding: 1rem 0.5rem;
   line-height: 1.5;
   color: var(--body-clr);
@@ -37,7 +38,8 @@
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
   }
-  .dropdown p {
+  .dropdown p,
+  .dropdownList {
     font-size: 1.5rem;
     padding: 1rem;
   }

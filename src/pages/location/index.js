@@ -42,14 +42,14 @@ export default class Location extends React.Component {
   }
 
   makeLocation() {
-    const { description, equipment, pictures } = this.state.data
+    const { description, equipments, pictures } = this.state.data
     return (
       <MainLayout>
         <main className="location">
           <Carousel data={pictures} />
           <LocationContent data={this.state.data} />
           <Dropdown title="Description" text={description} />
-          <Dropdown title="Équipements" text={equipment} />
+          <Dropdown title="Équipements" list={equipments} />
         </main>
       </MainLayout>
     )
