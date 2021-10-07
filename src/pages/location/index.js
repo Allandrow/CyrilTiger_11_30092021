@@ -48,8 +48,10 @@ export default class Location extends React.Component {
         <main className="location">
           <Carousel data={pictures} />
           <LocationContent data={this.state.data} />
-          <Dropdown title="Description" text={description} />
-          <Dropdown title="Équipements" list={equipments} />
+          <div className="dropdowns">
+            <Dropdown title="Description" text={description} />
+            <Dropdown title="Équipements" list={equipments} />
+          </div>
         </main>
       </MainLayout>
     )

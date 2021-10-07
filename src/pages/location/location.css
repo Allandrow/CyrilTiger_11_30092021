@@ -4,8 +4,32 @@
   gap: 1rem;
 }
 
+.location .dropdowns {
+  gap: 1rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 768px) {
   .location {
     margin-top: 1rem;
+    gap: 1.5rem;
+  }
+
+  .location .dropdowns {
+    gap: 1.5rem;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .location .dropdown {
+    flex: 1;
+  }
+
+  .location .dropdown summary,
+  .location .dropdown p,
+  .location .dropdownList {
+    font-size: 1.125rem;
   }
 }

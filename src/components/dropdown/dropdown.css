@@ -1,5 +1,4 @@
 .dropdown {
-  background-color: #f6f6f6;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -13,6 +12,12 @@
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.5rem;
+}
+
+.dropdown > div {
+  background-color: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  height: 100%;
 }
 
 .dropdown img {
