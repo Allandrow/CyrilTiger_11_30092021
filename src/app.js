@@ -5,11 +5,11 @@ import About from './pages/about'
 import Error from './pages/error'
 import Location from './pages/location'
 
-export default function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/about">
+        <Route exact path="/about">
           <About />
         </Route>
         <Route exact path="/">
@@ -23,3 +23,5 @@ export default function App() {
     </Router>
   )
 }
+
+export default App

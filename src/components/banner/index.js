@@ -1,8 +1,8 @@
 import React from 'react'
 import './banner.css'
 
-export default class Banner extends React.Component {
-  render() {
-    return <div className="banner">{this.props.title}</div>
-  }
+const Banner = (props) => {
+  return <div className="banner">{props.title}</div>
 }
+
+export default Banner
