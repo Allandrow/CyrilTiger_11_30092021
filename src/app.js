@@ -5,23 +5,21 @@ import About from './pages/about'
 import Error from './pages/error'
 import Location from './pages/location'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/location/:id" component={Location} />
-          <Route path="*">
-            <Error />
-          </Route>
-        </Switch>
-      </Router>
-    )
-  }
+export default function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/location/:id" component={Location} />
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
