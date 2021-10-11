@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
           <Route exact path="/">
