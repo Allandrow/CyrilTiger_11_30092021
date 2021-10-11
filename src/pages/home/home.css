@@ -8,6 +8,12 @@
   grid-gap: 1.25rem;
 }
 
+@media screen and (min-width: 768px) {
+  .locationList ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .locationList {
     background-color: #f6f6f6;
