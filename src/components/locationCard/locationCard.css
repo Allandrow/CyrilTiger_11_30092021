@@ -24,7 +24,7 @@
 
 .locationCard img {
   object-fit: cover;
-  height: auto;
+  height: 100%;
   min-width: 100%;
 }
 
