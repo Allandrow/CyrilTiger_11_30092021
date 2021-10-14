@@ -22,8 +22,8 @@
 }
 
 .error a {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 20%;
   color: inherit;
 }
 
