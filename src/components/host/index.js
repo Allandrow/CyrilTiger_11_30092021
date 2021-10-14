@@ -11,8 +11,8 @@ const splitHostName = (name) => {
   )
 }
 
-const Host = (props) => {
-  const { name, picture } = props.data
+const Host = ({data}) => {
+  const { name, picture } = data
   return (
     <div className="host">
       {splitHostName(name)}

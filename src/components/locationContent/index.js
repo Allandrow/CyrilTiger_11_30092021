@@ -3,8 +3,8 @@ import Host from '../host'
 import Rating from '../rating'
 import './locationContent.css'
 
-const LocationContent = (props) => {
-  const { title, location, host, tags, rating } = props.data
+const LocationContent = ({ data }) => {
+  const { title, location, host, tags, rating } = data
   return (
     <div className="location__content">
       <div>

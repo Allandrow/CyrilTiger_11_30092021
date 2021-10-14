@@ -2,18 +2,18 @@ import React from 'react'
 import Arrow from '../arrow'
 import './dropdown.css'
 
-const Dropdown = (props) => {
+const Dropdown = ({ title, text, list }) => {
   return (
     <details className="dropdown">
       <summary>
-        {props.title}
+        {title}
         <Arrow />
       </summary>
       <div>
-        {props.text && <p>{props.text}</p>}
-        {props.list && (
+        {text && <p>{text}</p>}
+        {list && (
           <ul className="dropdownList">
-            {props.list.map((item) => (
+            {list.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>

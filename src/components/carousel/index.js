@@ -6,15 +6,9 @@ export default class Carousel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      current: null
+      current: 0
     }
     this.updateCurrentVisibleMedia = this.updateCurrentVisibleMedia.bind(this)
-  }
-
-  componentDidMount() {
-    this.setState({
-      current: 0
-    })
   }
 
   updateCurrentVisibleMedia(direction) {
@@ -54,7 +48,7 @@ export default class Carousel extends React.Component {
         <div className="carousel">
           <CarouselControl
             className="prevBtn"
-            onClick={this.updateCurrentVisibleMedia}
+            trigger={this.updateCurrentVisibleMedia}
             direction={'previous'}
           />
           {this.generateCarouselMedias()}
@@ -63,7 +57,7 @@ export default class Carousel extends React.Component {
           `}</span>
           <CarouselControl
             className="nextBtn"
-            onClick={this.updateCurrentVisibleMedia}
+            trigger={this.updateCurrentVisibleMedia}
             direction={'next'}
           />
         </div>

@@ -1,15 +1,12 @@
 import React from 'react'
 import Arrow from '../arrow'
 
-export default class CarouselControl extends React.Component {
-  render() {
-    return (
-      <button
-        className={this.props.className}
-        onClick={() => this.props.onClick(this.props.direction)}
-      >
-        <Arrow />
-      </button>
-    )
-  }
+const CarouselControl = ({ className, trigger, direction }) => {
+  return (
+    <button className={className} onClick={() => trigger(direction)}>
+      <Arrow />
+    </button>
+  )
 }
+
+export default CarouselControl

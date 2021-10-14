@@ -1,11 +1,11 @@
 import React from 'react'
 import LocationCard from '../locationCard'
 
-const LocationList = (props) => {
+const LocationList = ({data}) => {
   return (
     <section className="locationList">
       <ul>
-        {props.data.map((location) => (
+        {data.map((location) => (
           <LocationCard key={location.id} location={location} />
         ))}
       </ul>

@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './locationCard.css'
 
-const LocationCard = (props) => {
-  const { id, cover, title } = props.location
+const LocationCard = ({location}) => {
+  const { id, cover, title } = location
   return (
     <li>
       <Link to={`/location/${id}`} className="locationCard">
