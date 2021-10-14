@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../components/header'
 
-const FooterLessLayout = (props) => {
+const FooterLessLayout = ({ children }) => {
   return (
     <div>
       <div className="wrapper">
         <Header />
-        {props.children}
+        {children}
       </div>
     </div>
   )
