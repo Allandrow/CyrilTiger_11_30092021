@@ -6,15 +6,9 @@ export default class Carousel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      current: null
+      current: 0
     }
     this.updateCurrentVisibleMedia = this.updateCurrentVisibleMedia.bind(this)
-  }
-
-  componentDidMount() {
-    this.setState({
-      current: 0
-    })
   }
 
   updateCurrentVisibleMedia(direction) {
@@ -58,9 +52,9 @@ export default class Carousel extends React.Component {
             direction={'previous'}
           />
           {this.generateCarouselMedias()}
-          <span className="currentCount">{`
-            ${this.state.current + 1}/${this.props.data.length}
-          `}</span>
+          <span className="currentCount">
+            {`${this.state.current + 1}/${this.props.data.length}`}
+          </span>
           <CarouselControl
             className="nextBtn"
             onClick={this.updateCurrentVisibleMedia}
