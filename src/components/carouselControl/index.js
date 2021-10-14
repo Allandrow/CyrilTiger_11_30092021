@@ -1,9 +1,9 @@
 import React from 'react'
 import Arrow from '../arrow'
 
-const CarouselControl = ({ className, trigger, direction }) => {
+const CarouselControl = ({ className, trigger }) => {
   return (
-    <button className={className} onClick={() => trigger(direction)}>
+    <button className={className} onClick={() => trigger()}>
       <Arrow />
     </button>
   )
