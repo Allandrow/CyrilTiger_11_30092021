@@ -26,25 +26,23 @@ const makeLocation = (data) => {
 const Location = () => {
   const [data, setData] = useState(undefined)
   const [isLoaded, setLoadingStatus] = useState(false)
-  const params = useParams()
+  const {id} = useParams()
 
   useEffect(() => {
     fetch('../data/data.json')
       .then((res) => res.json())
       .then(
         (result) => {
-          if (!data) {
-            setLoadingStatus(true)
-            const data = result.find((location) => location.id === params.id)
-            setData(data)
-          }
+          setLoadingStatus(true)
+          const data = result.find((location) => location.id === id)
+          setData(data)
         },
         (error) => {
           setLoadingStatus(true)
           console.error(error)
         }
       )
-  })
+  }, [id])
 
   if (!isLoaded) return null
   if (isLoaded && data) return makeLocation(data)
