@@ -33,6 +33,8 @@
 
 .location__content .tag {
   background-color: var(--body-clr);
+  display: flex;
+  align-items: center;
   color: #fff;
   border-radius: 10px;
   font-size: 0.625rem;

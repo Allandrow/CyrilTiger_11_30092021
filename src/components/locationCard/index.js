@@ -4,19 +4,14 @@ import './locationCard.css'
 
 export default class LocationCard extends React.Component {
   render() {
+    const { id, cover, title } = this.props.location
     return (
       <li>
-        <Link
-          to={`/location/${this.props.location.id}`}
-          className="locationCard"
-        >
+        <Link to={`/location/${id}`} className="locationCard">
           <div className="imgGradient">
-            <img
-              src={this.props.location.cover}
-              alt={this.props.location.title}
-            />
+            <img src={cover} alt={title} />
           </div>
-          <h3>{this.props.location.title}</h3>
+          <h3>{title}</h3>
         </Link>
       </li>
     )
